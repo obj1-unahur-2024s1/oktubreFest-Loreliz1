@@ -1,0 +1,34 @@
+import cervezas.*
+import carpas.*
+
+describe "primera parte"{
+	const corona = new CervezaRubia(lupulo = 4, paisFabricacion = "Argentina", graduacionAlcohol= 8)
+	const jarra = new Jarra( litros = 0.5, marca = corona)
+
+	const guiness = new CervezaNegra( lupulo = 6, paisFabricacion = "Argentina", graduacionAlcohol= 6)
+	const jarra2 = new Jarra( litros = 0.8, marca = guiness)
+	
+	const corona2 = new CervezaRubia(lupulo = 4, paisFabricacion = "Argentina", graduacionAlcohol= 8)
+	const jarra3 = new Jarra( litros = 1.5, marca = corona2)
+	
+	
+	const jarrasCompradas=[jarra, jarra3,jarra3]
+	const laura = new Belgas(peso = 55, leGustaEscucharMusicaTrad= true, aguante= 5 )
+	
+test "jarra contiene 0.04 litros de alcohol" {
+	assert.equals(0.004, jarra.contenidoAlcohol())
+}
+
+test "jarra2 contiene 6 de alcohol" {
+	assert.equals(0.0048, jarra2.contenidoAlcohol())
+}
+
+test "jarra3 contiene 0.012 litros de alcohol" {
+	assert.equals(0.012, jarra3.contenidoAlcohol())
+}
+
+test "laura"{
+	
+}
+}
+
